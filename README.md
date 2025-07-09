@@ -68,7 +68,7 @@ _Si van a crear mas endpoints como el login o registrarse recuerden actualizar p
 
 #####
 Para ejecutar docker, desde la carpeta raíz corre el siguiente comando:
-docker build -t mi-app-springboot:latest 
+docker build -t mi-app-springboot:latest .
 docker images | grep mi-app-springboot
 docker run --rm -p 8080:8080 mi-app-springboot:latest
 
