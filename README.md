@@ -65,3 +65,12 @@ _Si van a crear mas endpoints como el login o registrarse recuerden actualizar p
 - [ ] Probar todos los flujos con Postman/Insomnia/Bruno.
 - [ ] Mostrar que los roles se comportan correctamente.
 - [ ] Incluir usuarios de prueba (`user`, `tech`) y contraseñas.
+
+#####
+Para ejecutar docker, desde la carpeta raíz corre el siguiente comando:
+docker build -t mi-app-springboot:latest 
+docker images | grep mi-app-springboot
+docker run --rm -p 8080:8080 mi-app-springboot:latest
+
+Además en la carpeta raíz, se ha añadido un archivo llamado CollectionPostman para que puedas probar los endpoints de login
+ 
