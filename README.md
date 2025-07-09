@@ -4,7 +4,7 @@ Este repositorio contiene un proyecto para evaluar y practicar los conceptos de 
 
 ### Estudiantes
 - **Nombre del estudiante 1**: Jesus Antonio Alvarado Gonzalez - 00144318
-- **Nombre del estudiante 2**: [Tu nombre aquí] - [Carnet aquí]
+- **Nombre del estudiante 2**: Wilson David Hernández Martínez - 00135222
 - Sección: 01
 ---
 
