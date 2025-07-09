@@ -1,11 +1,8 @@
-server:
-  port: 8082
-
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/supportdb
     username: postgres
-    password: postgres
+    password: admin123
   jpa:
     hibernate:
       ddl-auto: update
