@@ -50,7 +50,11 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.POST, "/api/auth/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/auth/logout").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/users").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/users/all").hasRole("TECH")
+                        .requestMatchers(HttpMethod.GET, "/api/users/*").hasRole("TECH")
+                        .requestMatchers(HttpMethod.PUT, "/api/users").hasRole("TECH")
+                        .requestMatchers(HttpMethod.DELETE, "/api/users/*").hasRole("TECH")
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);

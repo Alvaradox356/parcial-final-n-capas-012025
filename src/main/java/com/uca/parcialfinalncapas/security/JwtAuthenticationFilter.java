@@ -36,7 +36,9 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
         boolean isPublicPath =
                 (method.equals("POST") && path.equals("/api/auth/login")) ||
-                        (method.equals("POST") && path.equals("/api/auth/logout"));
+                        (method.equals("POST") && path.equals("/api/auth/logout")) ||
+                        (method.equals("POST") && path.equals("/api/users"));
+
 
 
         if (isPublicPath) {

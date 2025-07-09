@@ -36,6 +36,7 @@ public class UserController {
     }
 
     @GetMapping("/{correo}")
+    @PreAuthorize("hasRole('TECH')")
     public ResponseEntity<GeneralResponse> getUserByCorreo(@PathVariable String correo) {
         UserResponse user = userService.findByCorreo(correo);
         return ResponseBuilderUtil.buildResponse("Usuario encontrado", HttpStatus.OK, user);
@@ -48,12 +49,14 @@ public class UserController {
     }
 
     @PutMapping
+    @PreAuthorize("hasRole('TECH')")
     public ResponseEntity<GeneralResponse> updateUser(@Valid @RequestBody UserUpdateRequest user) {
         UserResponse updatedUser = userService.update(user);
         return ResponseBuilderUtil.buildResponse("Usuario actualizado correctamente", HttpStatus.OK, updatedUser);
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('TECH')")
     public ResponseEntity<GeneralResponse> deleteUser(@PathVariable Long id) {
         userService.delete(id);
         return ResponseBuilderUtil.buildResponse("Usuario eliminado correctamente", HttpStatus.OK, null);
