@@ -30,7 +30,7 @@ public class TicketController {
     }
 
     @GetMapping("/{id}")
-    @PreAuthorize("hasRole('TECH')")
+    @PreAuthorize("hasAnyRole('USER','TECH')")
     public ResponseEntity<GeneralResponse> getTicketById(@PathVariable Long id) {
         TicketResponse ticket = ticketService.getTicketById(id);
         if (ticket == null) {
